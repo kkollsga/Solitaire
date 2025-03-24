@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Solitaire</title>
+    
+    <!-- iOS app installation headers -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Solitaire">
+    
+    <!-- iOS icons -->
+    <link rel="apple-touch-icon" href="data:image/png;base64,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">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <style>
         * {
@@ -160,9 +169,44 @@
         .new-game-button:active {
             transform: translateY(1px);
         }
+        
+        /* Add loader for splash screen */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #076324;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease-out;
+        }
+        .splash-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1000px) {
+            .game-board {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen p-6">
+    <!-- Splash screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="text-white text-center">
+            <h1 class="text-4xl font-bold mb-4">Solitaire</h1>
+            <p class="text-xl">Loading game...</p>
+        </div>
+    </div>
+    
     <div class="game-board">
         <div class="bg-green-800 rounded-lg p-6 shadow-xl">
             <!-- Top row with stock, waste, and foundation piles -->
@@ -199,7 +243,7 @@
             </div>
             
             <!-- Tableau piles (7 columns) -->
-            <div class="tableau-area">
+            <div id="tableau-container" class="tableau-area">
                 <div id="tableau-0" class="tableau-column"></div>
                 <div id="tableau-1" class="tableau-column"></div>
                 <div id="tableau-2" class="tableau-column"></div>
@@ -241,10 +285,121 @@
         let gameWon = false;
         let timerInterval = null;
         let startTime = 0;
+        let gameStarted = false; // Flag to track if game has started (first move made)
         
         // Card configuration
         const suits = ['♥', '♦', '♣', '♠'];
         const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+        
+        // Used to store references to card elements
+        let cardElementMap = new WeakMap();
+        
+        // Wait for DOM to be fully loaded before initializing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up event delegation
+            setupEventDelegation();
+            
+            // Initialize the game
+            initGame();
+            
+            // Hide splash screen after a short delay
+            setTimeout(function() {
+                document.getElementById('splash-screen').classList.add('hidden');
+            }, 1000);
+        });
+        
+        // Set up event delegation
+        function setupEventDelegation() {
+            // Stock pile events
+            document.getElementById('stock').addEventListener('click', function(event) {
+                if (stock.length > 0) {
+                    startGameIfNeeded();
+                    drawCards();
+                } else {
+                    startGameIfNeeded();
+                    resetStock();
+                }
+            });
+            
+            // Waste pile events
+            document.getElementById('waste').addEventListener('click', function(event) {
+                const target = event.target.closest('.waste-card');
+                if (!target) return;
+                
+                startGameIfNeeded();
+                const index = parseInt(target.dataset.index || '0');
+                if (index === waste.length - 1) { // Only select top card
+                    selectWasteCard(index);
+                }
+            });
+            
+            // Foundation events
+            document.querySelector('.foundation-area').addEventListener('click', function(event) {
+                const target = event.target.closest('.foundation-pile');
+                if (!target) return;
+                
+                const pileIndex = parseInt(target.id.split('-')[1]);
+                
+                if (selectedCard) {
+                    startGameIfNeeded();
+                    tryMoveToFoundation(pileIndex);
+                } else if (foundation[pileIndex].length > 0) {
+                    startGameIfNeeded();
+                    selectFoundationCard(pileIndex);
+                }
+            });
+            
+            // Tableau events
+            document.getElementById('tableau-container').addEventListener('click', function(event) {
+                const targetCard = event.target.closest('.card');
+                if (!targetCard) return;
+                
+                const tableauColumn = targetCard.closest('.tableau-column');
+                if (!tableauColumn) return;
+                
+                const pileIndex = parseInt(tableauColumn.id.split('-')[1]);
+                
+                // If a card is already selected, try to move it to this pile
+                if (selectedCard && !(selectedPile === `tableau-${pileIndex}` && targetCard.classList.contains('card-selected'))) {
+                    startGameIfNeeded();
+                    if (canMoveToTableau(pileIndex)) {
+                        moveToTableau(pileIndex);
+                        return;
+                    }
+                    deselectCard();
+                    return;
+                }
+                
+                // If the card is face down and it's the top card, flip it
+                if (targetCard.classList.contains('card-back')) {
+                    if (parseInt(targetCard.style.zIndex) === tableau[pileIndex].length - 1) {
+                        startGameIfNeeded();
+                        flipTableauCard(pileIndex);
+                    }
+                    return;
+                }
+                
+                // Get the card index from its position
+                const cardIndex = parseInt(targetCard.style.zIndex || '0');
+                if (!isNaN(cardIndex)) {
+                    startGameIfNeeded();
+                    selectTableauCard(pileIndex, cardIndex);
+                }
+            });
+        }
+        
+        // Start the game timer if this is the first move
+        function startGameIfNeeded() {
+            if (!gameStarted) {
+                gameStarted = true;
+                startTimer();
+            }
+        }
+        
+        // Cleanup function to remove old event listeners
+        function cleanupEventListeners() {
+            // Using event delegation, so no need to clean up individual card listeners
+        }
         
         // Initialize the game
         function initGame() {
@@ -259,10 +414,10 @@
             selectedIndex = -1;
             moveCount = 0;
             gameWon = false;
+            gameStarted = false; // Reset game started flag
             
-            // Reset and start timer
+            // Reset timer display but don't start it
             resetTimer();
-            startTimer();
             
             updateMoveCount();
             
@@ -297,8 +452,31 @@
             // Put remaining cards in stock
             stock = [...deck];
             
-            // Render the initial game state
+            // Clear card element references
+            cardElementMap = new WeakMap();
+            
+            // Clear DOM and render the initial game state
+            clearGameBoard();
             renderGame();
+        }
+        
+        // Clear the game board elements before re-rendering
+        function clearGameBoard() {
+            // Clear stock
+            document.getElementById('stock').innerHTML = '';
+            
+            // Clear waste
+            document.getElementById('waste').innerHTML = '<div class="card card-placeholder absolute"></div>';
+            
+            // Clear foundation piles
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`foundation-${i}`).innerHTML = '<div class="card card-placeholder absolute"></div>';
+            }
+            
+            // Clear tableau columns
+            for (let i = 0; i < 7; i++) {
+                document.getElementById(`tableau-${i}`).innerHTML = '';
+            }
         }
         
         // Timer functions
@@ -345,12 +523,10 @@
             if (stock.length > 0) {
                 const cardElement = document.createElement('div');
                 cardElement.className = 'card card-back cursor-pointer';
-                cardElement.addEventListener('click', drawCards);
                 stockElement.appendChild(cardElement);
             } else {
                 const cardElement = document.createElement('div');
                 cardElement.className = 'card card-placeholder cursor-pointer';
-                cardElement.addEventListener('click', resetStock);
                 stockElement.appendChild(cardElement);
             }
             
@@ -371,9 +547,8 @@
                 cardElement.style.zIndex = i.toString();
                 cardElement.dataset.index = index.toString();
                 
-                if (isTop) {
-                    cardElement.addEventListener('click', () => selectWasteCard(index));
-                }
+                // Store reference to the element
+                cardElementMap.set(card, cardElement);
                 
                 wasteElement.appendChild(cardElement);
             }
@@ -386,7 +561,6 @@
                 // Always add placeholder
                 const placeholderElement = document.createElement('div');
                 placeholderElement.className = 'card card-placeholder absolute';
-                placeholderElement.addEventListener('click', () => tryMoveToFoundation(i));
                 foundationElement.appendChild(placeholderElement);
                 
                 // Show top card if any (on top of placeholder)
@@ -395,15 +569,8 @@
                     const cardElement = createCardElement(card, true);
                     cardElement.classList.add('foundation-card');
                     
-                    // If a card is already selected, try to move it to this foundation
-                    // If no card is selected, select the foundation card
-                    cardElement.addEventListener('click', () => {
-                        if (selectedCard) {
-                            tryMoveToFoundation(i);
-                        } else {
-                            selectFoundationCard(i);
-                        }
-                    });
+                    // Store reference to the element
+                    cardElementMap.set(card, cardElement);
                     
                     foundationElement.appendChild(cardElement);
                 }
@@ -417,7 +584,6 @@
                 // Add placeholder for empty piles
                 const placeholderElement = document.createElement('div');
                 placeholderElement.className = 'card card-placeholder absolute';
-                placeholderElement.addEventListener('click', () => tryMoveToTableau(i));
                 tableauElement.appendChild(placeholderElement);
                 
                 // Render cards in cascade
@@ -431,11 +597,9 @@
                     cardElement.style.transform = `translateY(${j * 25}px)`;
                     cardElement.style.zIndex = j.toString();
                     
+                    // Store reference to the element
                     if (card.faceUp) {
-                        cardElement.addEventListener('click', () => selectTableauCard(i, j));
-                    } else if (j === tableau[i].length - 1) {
-                        // Add flip functionality to top face-down card
-                        cardElement.addEventListener('click', () => flipTableauCard(i));
+                        cardElementMap.set(card, cardElement);
                     }
                     
                     tableauElement.appendChild(cardElement);
@@ -744,11 +908,12 @@
             updateMoveCount();
         }
         
-        // Event listeners
-        document.getElementById('new-game').addEventListener('click', initGame);
-        
-        // Initialize the game
-        initGame();
+        // Set up event listeners
+        document.getElementById('new-game').addEventListener('click', function() {
+            // Clean up existing listeners before initializing new game
+            cleanupEventListeners();
+            initGame();
+        });
     </script>
 </body>
 </html>
